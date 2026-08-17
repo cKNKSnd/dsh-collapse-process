@@ -1,0 +1,32 @@
+{
+  "name": "dsh-collapse-process",
+  "version": "0.1.0",
+  "description": "DSH web plugin: 折叠对话中的思考过程与工具调用等过程行，会话头部按钮一键切换显示/隐藏。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

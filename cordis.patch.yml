@@ -1,0 +1,9 @@
+# dsh-collapse-process bundle patch
+#
+# 这是 dsh.bundle.patch 层：通过官方 CLI 安装后
+#   dsh plugin --profile <name> add dsh-collapse-process
+# 命令会把 `dsh-collapse-process` 追加到 profile 的 bundle 栈，
+# profile 启动时合并本 patch（插入插件行）——无需手动编辑任何 profile 文件。
+- insert:
+    - id: collapse-process
+      name: 'dsh-collapse-process'
